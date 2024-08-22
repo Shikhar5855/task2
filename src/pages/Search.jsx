@@ -46,7 +46,11 @@ export default function Search() {
 	</svg>
 	<input type="search" aria-label="Search for inspiration"/>
 </div>
-
+<div className="text">
+<h3>
+	Please search the data...
+</h3>
+</div>
 <div id="results">
 	
 </div>

@@ -5,7 +5,14 @@
   font-family: Urbanist, system-ui, Helvetica, sans-serif;
   color-scheme: light dark;
 }
-
+header{
+  background-color: #4d677f;
+}
+nav{
+  justify-content: end;
+  margin-top: auto;
+  margin-bottom: auto;
+}
 :root {
   --bg-color: #2a1d1d;
   --btn-color: #a10303;
@@ -366,7 +373,7 @@ body {
 
 
 #search {
-  margin: 100px;
+  margin: 50px;
 	display: grid;
 	grid-area: search;
 	grid-template:
@@ -558,4 +565,10 @@ body {
 #results {
 	grid-area: results;
 	background: hsl(0, 94%, 13%);
+}
+.text{
+  justify-content: center;
+  color: #000000;
+  display: flex;
+  margin: 50px;
 }
