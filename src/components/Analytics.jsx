@@ -4,20 +4,24 @@ export const Analytics = ()=>{
         <section className="section-analytics">
             <div className="container grid grid-four-cols">
                 <div className="div1">
-                    <h2>50+</h2>
-                    <p>Registered Companies</p>
+                    <h>50+</h>
+                    <br></br>
+                    <t>Registered Companies</t>
                 </div>
                 <div className="div1">
-                    <h2>100,00+</h2>
-                    <p>Happy Clients</p>
+                    <h>100,00+</h>
+                    <br></br>
+                    <t>Happy Clients</t>
                 </div>
                 <div className="div1">
-                    <h2>500+</h2>
-                    <p>Well Known Developers</p>
+                    <h>500+</h>
+                    <br></br>
+                    <t>Well Known Developers</t>
                 </div>
                 <div className="div1">
-                    <h2>24/7</h2>
-                    <p>Service</p>
+                    <h>24/7</h>
+                    <br></br>
+                    <t>Service</t>
                 </div>
             </div>
         </section>

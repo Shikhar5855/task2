@@ -49,6 +49,7 @@ export const Contact = () => {
                       <input
                         type="text"
                         name="username"
+                        placeholder="username"
                         id="username"
                         autoComplete="off"
                         value={contact.username}
@@ -62,6 +63,7 @@ export const Contact = () => {
                       <input
                         type="email"
                         name="email"
+                        placeholder="email"
                         id="email"
                         autoComplete="off"
                         value={contact.email}
@@ -74,6 +76,7 @@ export const Contact = () => {
                       <label htmlFor="message">message</label>
                       <textarea
                         name="message"
+                        placeholder="message"
                         id="message"
                         autoComplete="off"
                         value={contact.message}
