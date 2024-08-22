@@ -3,4 +3,6 @@ footer{
     text-align: center;
     background-color: var(--btn-color);
     margin-top: auto;
+    position:relative;
+    width: 100%;
 }

@@ -9,7 +9,9 @@ export const Navbar = () => {
       <header>
         <div className="container">
           <div className="logo-brand">
-            <a href="/">AlobhaTechnology</a>
+            <a href="/">
+            <img src="/images/logo_adroitkey.png" >
+            </img></a>
           </div>
 
           <nav>
@@ -32,9 +34,6 @@ export const Navbar = () => {
                 </li>
               ) : (
                 <>
-                  <li>
-                    <NavLink to="/register">Register</NavLink>
-                  </li>
                   <li>
                     <NavLink to="/login">Login</NavLink>
                   </li>

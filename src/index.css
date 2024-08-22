@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -7,33 +7,38 @@
 }
 
 :root {
-  --bg-color: #f4f3ff;
-  --btn-color: #646cff;
-  --dark-color: #242424;
-  --helper-color: #99b9ff;
+  --bg-color: #2a1d1d;
+  --btn-color: #a10303;
+  --dark-color: #c53c3c;
+  --helper-color: #474c57;
 }
 
-html{
+html {
   font-size: 62.5%;
 }
 
 /* Base styling */
 
-body{
+body {
   margin: 0;
   /* display: flex;
   place-items: centre; */
   min-height: 100vh;
   /* min-width: 32rem; */
+  background-color: #5c7c99;
 }
 
-h1{
+h1 {
   font-size: 5.4rem;
   line-height: 1.1;
   font-weight: bold;
 }
 
-p,li,label,input,textarea{
+p,
+li,
+label,
+input,
+textarea {
   font-size: 1.8rem;
   line-height: 1.56;
   letter-spacing: 0.1rem;
@@ -48,34 +53,34 @@ a {
   text-decoration: inherit;
 }
 
-li{
+li {
   list-style: none;
 }
 
 /* layout rule */
 
-.container{
+.container {
   max-width: 140rem;
   padding: 4rem 2.4rem;
   margin: 0 auto;
 }
 
-.grid{
+.grid {
   display: grid;
   gap: 6.4rem;
 }
 
-.grid-two-cols{
+.grid-two-cols {
   grid-template-columns: repeat(2, 1fr);
 }
 
-.grid-four-cols{
+.grid-four-cols {
   grid-template-columns: repeat(4, 1fr);
 }
 
 /* Module Rules or ReUsable components */
 
-button{
+button {
   text-transform: capitalize;
   padding: 1rem 2.2rem;
   font-size: 1.7rem;
@@ -88,7 +93,7 @@ button{
   transition: border-color 0.3s;
 }
 
-.secondary-btn{
+.secondary-btn {
   background-color: transparent;
   box-shadow: inset 0 0 0 0.2rem var(--btn-color);
   margin-left: 3.2rem;
@@ -96,42 +101,36 @@ button{
 
 /* state rules */
 
-button:hover{
+button:hover {
   box-shadow: inset 0 0 0 0.2rem var(--bg-color);
   /* border: 0.2rem solid #fff; */
 }
 
 a:hover,
 a.active {
-  color: #535bf2;
+  color: #000000;
 }
 
 /*Pseudo elements*/
-.main-heading{
+.main-heading {
   position: relative;
   text-transform: capitalize;
 
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 50%;
-    height: 0.5rem;
-    background-color: var(--btn-color);
-  }
+  
 }
 
-@media(prefers-color-scheme: light){
-  :root{
+@media(prefers-color-scheme: light) {
+  :root {
     color: #213547;
     background-color: #ffff;
   }
+
   a:hover,
-  a.active{
-    color: #747bff
+  a.active {
+    color: #000000
   }
-  button{
+
+  button {
     background-color: #f9f9f9;
   }
 }
@@ -139,7 +138,7 @@ a.active {
 
 /*****Hero Section*****/
 
-.section-hero{
+.section-hero {
   & .grid {
     align-items: center;
   }
@@ -147,16 +146,18 @@ a.active {
   .hero-content {
     & p {
       margin: 2.4rem 0 4.8rem 0;
+
       &:first-child {
         margin: 0 0 1.2rem 0;
       }
     }
   }
 
-  .hero-image{
+  .hero-image {
     display: flex;
     justify-content: center;
-    & img{
+
+    & img {
       width: 70%;
       height: auto;
     }
@@ -169,22 +170,26 @@ a.active {
 .section-analytics {
   margin: 9.6rem 0;
 
-  & .container{
+  & .container {
     background-color: var(--bg-color);
     border-radius: 1rem;
   }
 
-  & .grid{
+  & .grid {
     color: var(--dark-color);
-    & .div1{
+
+    & .div1 {
       text-align: center;
       border-right: 0.2rem solid var(--dark-color);
+
       &:last-child {
         border: none;
       }
+
       & h2 {
         font-size: 4.8rem
       }
+
       & p {
         text-transform: capitalize;
       }
@@ -197,37 +202,45 @@ a.active {
 
 
 /*****Contact Section CSS*****/
-.section-contact{
+.section-contact {
   & .contact-content {
     padding: 0;
-    & h1{
+
+    & h1 {
       margin-bottom: 3.2rem;
     }
   }
-  & .container{
+
+  & .container {
     padding-top: 3.2rem;
   }
-  & .contact-img{
+
+  & .contact-img {
     display: flex;
     justify-content: start;
     align-items: center;
-    & img{
+
+    & img {
       width: 80%;
       height: auto;
     }
   }
-  & .section-form{
-    & form{
+
+  & .section-form {
+    & form {
       display: flex;
       flex-direction: column;
       gap: 3.2rem;
     }
-    & label{
+
+    & label {
       display: block;
       margin-bottom: 1.2rem;
       text-transform: capitalize;
     }
-    & input,textarea{
+
+    & input,
+    textarea {
       width: 80%;
       padding: 0.2rem 0.6rem;
     }
@@ -235,22 +248,24 @@ a.active {
 }
 
 /*****Error Section CSS*****/
-#error-page{
+#error-page {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-#error-page .content{
+
+#error-page .content {
   max-width: 70rem;
   text-align: center;
 }
-.content h2.header{
+
+.content h2.header {
   font-size: 18vw;
   line-height: 1em;
   animation: animate 10s ease-in-out infinite;
   background: -webkit-repeating-linear-gradient(-60deg, #71b7e6, var(--btn-color), #b98acc, #ee8176, #b98acc, var(--btn-color), #9b59b6);
   background-size: 500%;
-  -webkit-background-clip: text;
+  /* -webkit-background-clip: text; */
   -webkit-text-fill-color: transparent;
   text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.25);
   position: relative;
@@ -278,6 +293,7 @@ a.active {
       margin: 2.4rem 0 0.8rem 0;
       text-transform: capitalize;
     }
+
     & input {
       width: 80%;
       padding: 0.6rem 0.6rem;
@@ -310,6 +326,7 @@ a.active {
       margin: 2.4rem 0 0.8rem 0;
       text-transform: capitalize;
     }
+
     & input {
       width: 80%;
       padding: 0.6rem 0.6rem;
@@ -321,3 +338,224 @@ a.active {
   }
 }
 
+.service {
+  display: grid;
+  gap: 15px;
+}
+.search{
+  display: grid;
+}
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	min-height: 100vh;
+}
+
+body {
+	display: grid;
+	grid-template:
+		"search" minmax(300px, 50vh)
+		"results" minmax(20%, auto)
+		/ 1fr;
+	margin: 0;
+	font: 24px/1.5 system-ui, sans-serif;
+}
+
+
+
+#search {
+  margin: 100px;
+	display: grid;
+	grid-area: search;
+	grid-template:
+		"search" 60px
+		/ 420px;
+	justify-content: center;
+	align-content: center;
+	justify-items: stretch;
+	align-items: stretch;
+}
+
+#search input {
+	display: block;
+	grid-area: search;
+	-webkit-appearance: none;
+	appearance: none;
+	width: 100%;
+	height: 100%;
+	background: none;
+	padding: 0 30px 0 60px;
+	border: none;
+	border-radius: 100px;
+	font: 24px/1 system-ui, sans-serif;
+	outline-offset: -8px;
+}
+
+
+#search svg {
+	grid-area: search;
+	overflow: visible;
+	color: hsl(214, 100%, 1%);
+	fill: none;
+	stroke: currentColor;
+}
+
+.spark {
+	fill: currentColor;
+	stroke: none;
+}
+
+.spark:nth-child(1) {
+	animation:
+		spark-radius 2.03s 1s both,
+		spark-one-motion 2s 1s both;
+}
+
+@keyframes spark-radius {
+	0% { r: 0; animation-timing-function: cubic-bezier(0, 0.3, 0, 1.57) }
+	30% { r: 15; animation-timing-function: cubic-bezier(1, -0.39, 0.68, 1.04) }
+	95% { r: 8 }
+	99% { r: 10 }
+	99.99% { r: 7 }
+	100% { r: 0 }
+}
+
+@keyframes spark-one-motion {
+	0% { transform: translate(-20%, 50%); animation-timing-function: cubic-bezier(0.63, 0.88, 0, 1.25) }
+	20% { transform: rotate(-0deg) translate(0%, -50%); animation-timing-function: ease-in }
+	80% { transform: rotate(-230deg) translateX(-20%) rotate(-100deg) translateX(15%); animation-timing-function: linear }
+	100% { transform: rotate(-360deg) translate(30px, 100%); animation-timing-function: cubic-bezier(.64,.66,0,.51) }
+}
+
+.spark:nth-child(2) {
+	animation:
+		spark-radius 2.03s 1s both,
+		spark-two-motion 2.03s 1s both;
+}
+
+@keyframes spark-two-motion {
+	0% { transform: translate(120%, 50%) rotate(-70deg) translateY(0%); animation-timing-function: cubic-bezier(0.36, 0.18, 0.94, 0.55) }
+	20% { transform: translate(90%, -80%) rotate(60deg) translateY(-80%); animation-timing-function: cubic-bezier(0.16, 0.77, 1, 0.4) }
+	40% { transform: translate(110%, -50%) rotate(-30deg) translateY(-120%); animation-timing-function: linear }
+	70% { transform: translate(100%, -50%) rotate(120deg) translateY(-100%); animation-timing-function: linear }
+	80% { transform: translate(95%, 50%) rotate(80deg) translateY(-150%); animation-timing-function: cubic-bezier(.64,.66,0,.51) }
+	100% { transform: translate(100%, 50%) rotate(120deg) translateY(0%) }
+}
+
+.spark:nth-child(3) {
+	animation:
+		spark-radius 2.05s 1s both,
+		spark-three-motion 2.03s 1s both;
+}
+
+@keyframes spark-three-motion {
+	0% { transform: translate(50%, 100%) rotate(-40deg) translateX(0%); animation-timing-function: cubic-bezier(0.62, 0.56, 1, 0.54) }
+	30% { transform: translate(40%, 70%) rotate(20deg) translateX(20%); animation-timing-function: cubic-bezier(0, 0.21, 0.88, 0.46) }
+	40% { transform: translate(65%, 20%) rotate(-50deg) translateX(15%); animation-timing-function: cubic-bezier(0, 0.24, 1, 0.62) }
+	60% { transform: translate(60%, -40%) rotate(-50deg) translateX(20%); animation-timing-function: cubic-bezier(0, 0.24, 1, 0.62) }
+	70% { transform: translate(70%, -0%) rotate(-180deg) translateX(20%); animation-timing-function: cubic-bezier(0.15, 0.48, 0.76, 0.26) }
+	100% { transform: translate(70%, -0%) rotate(-360deg) translateX(0%) rotate(180deg) translateX(20%); }
+}
+
+
+
+
+.burst {
+	stroke-width: 3;
+}
+
+.burst :nth-child(2n) { color: #ff783e }
+.burst :nth-child(3n) { color: #ffab00 }
+.burst :nth-child(4n) { color: #55e214 }
+.burst :nth-child(5n) { color: #82d9f5 }
+
+
+.rect {
+	width: 10px;
+	height: 10px;
+}
+
+.plus {
+	stroke-linecap: round;
+}
+
+
+
+
+.burst:nth-child(4) {
+	transform: translate(30px, 100%) rotate(150deg);
+}
+
+.burst:nth-child(5) {
+	transform: translate(50%, 0%) rotate(-20deg);
+}
+
+.burst:nth-child(6) {
+	transform: translate(100%, 50%) rotate(75deg);
+}
+
+
+@keyframes particle-fade {
+	0%, 100% { opacity: 0 }
+	5%, 80% { opacity: 1 }
+}
+
+.burst :nth-child(1) { animation: particle-fade 600ms 2.95s both, particle-one-move 600ms 2.95s both; }
+.burst :nth-child(2) { animation: particle-fade 600ms 2.95s both, particle-two-move 600ms 2.95s both; }
+.burst :nth-child(3) { animation: particle-fade 600ms 2.95s both, particle-three-move 600ms 2.95s both; }
+.burst :nth-child(4) { animation: particle-fade 600ms 2.95s both, particle-four-move 600ms 2.95s both; }
+.burst :nth-child(5) { animation: particle-fade 600ms 2.95s both, particle-five-move 600ms 2.95s both; }
+.burst :nth-child(6) { animation: particle-fade 600ms 2.95s both, particle-six-move 600ms 2.95s both; }
+
+@keyframes particle-one-move { 0% { transform: rotate(0deg) translate(-5%) scale(0.0001, 0.0001) } 100% { transform: rotate(-20deg) translateX(8%) scale(0.5, 0.5) } }
+@keyframes particle-two-move { 0% { transform: rotate(0deg) translate(-5%) scale(0.0001, 0.0001) } 100% { transform: rotate(0deg) translateX(8%) scale(0.5, 0.5) } }
+@keyframes particle-three-move { 0% { transform: rotate(0deg) translate(-5%) scale(0.0001, 0.0001) } 100% { transform: rotate(20deg) translateX(8%) scale(0.5, 0.5) } }
+@keyframes particle-four-move { 0% { transform: rotate(0deg) translate(-5%) scale(0.0001, 0.0001) } 100% { transform: rotate(-35deg) translateX(12%) } }
+@keyframes particle-five-move { 0% { transform: rotate(0deg) translate(-5%) scale(0.0001, 0.0001) } 100% { transform: rotate(0deg) translateX(12%) } }
+@keyframes particle-six-move { 0% { transform: rotate(0deg) translate(-5%) scale(0.0001, 0.0001) } 100% { transform: rotate(35deg) translateX(12%) } }
+
+
+
+.bar {
+	width: 100%;
+	height: 100%;
+	ry: 50%;
+	stroke-width: 10;
+	animation: bar-in 900ms 3s both;
+}
+
+@keyframes bar-in {
+	0% { stroke-dasharray: 0 180 0 226 0 405 0 0 }
+	100% { stroke-dasharray: 0 0 181 0 227 0 405 0 }
+}
+
+.magnifier {
+	animation: magnifier-in 600ms 3.6s both;
+	transform-box: fill-box;
+}
+
+@keyframes magnifier-in {
+	0% { transform: translate(20px, 8px) rotate(-45deg) scale(0.01, 0.01); }
+	50% { transform: translate(-4px, 8px) rotate(-45deg); }
+	100% { transform: translate(0px, 0px) rotate(0deg); }
+}
+
+.magnifier .glass {
+	cx: 27;
+	cy: 27;
+	r: 8;
+	stroke-width: 3;
+}
+.magnifier .handle {
+	x1: 32;
+	y1: 32;
+	x2: 44;
+	y2: 44;
+	stroke-width: 3;
+}
+#results {
+	grid-area: results;
+	background: hsl(0, 94%, 13%);
+}

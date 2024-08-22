@@ -7,11 +7,13 @@ export const Home = ()=>{
             <section className="section-hero">
                 <div className="container grid grid-two-cols">
                     <div className="hero-content">
-                        <p>We are the World Best IT Company</p>
-                        <h1>Welcome to Alobha Technology</h1>
+                        <h1>Welcome to ADROITKEY  </h1>
                         <p>
-                            Are you ready to take your business to the nest level with cuting edge IT Solutions? Look no further! At Alobha Technology, 
-                            we specialised in providing innovative IT services and solutions tailored to meet your unique needs.
+                        GET EXCELLENT SERVICES AT
+                        ONE PLACE FROM YOUR DEVICE DOCTOR
+                        </p>
+                        <p>
+                        We are experts in services, repair, product, idea creation and can match your ideology to fulfill your needs. We have specialists in our team who work inflexibly nonstop and repairs your any brand Printers in the marketplace at a reasonable cost.
                         </p>
                         <div className="btn btn-group">
                             <a href="/contact"><button className="btn">Connect Now</button></a>
@@ -47,10 +49,7 @@ export const Home = ()=>{
                         <p>We are here to help you</p>
                         <h1>Get Started Today</h1>
                         <p>
-                        Ready to take the first step towards a more efficient and secure
-                        IT infrastructure? Contact us today for a free consultation and
-                        let's discuss how Alobha Technology can help your business thrive in
-                        the digital age.
+                        Welcome to AdroitKey and well known IT company specialized and all in one platform for your multiple needs. We are experts in services, repair, product, idea creation and can match your ideology to fulfill your needs. We have specialists in our team who work inflexibly nonstop and repairs your any brand Printers in the marketplace at a reasonable cost.
                         </p>
                         <div className="btn btn-group">
                             <a href="/contact"><button className="btn">Connect Now</button></a>

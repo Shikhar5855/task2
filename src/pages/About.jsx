@@ -12,27 +12,20 @@ export const About = ()=>{
 
               <h1>Why Choose Us? </h1>
               <p>
-                Expertise: Our team consists of experienced IT professionals who
-                are passionate about staying up-to-date with the latest industry
-                trends.
+              Any brand like HP printer repair services, Canon printer repair services, Epson printer repair services, brother printer repair services, GPS device repair, System repair and any other device repair services etc.. Printers can be repaired or improved by us, learn more about us and see why we are the best choice for your device repairs and upgrades.
               </p>
               <p>
-                Customization: We understand that every business is unique.
-                Thats why we create solutions that are tailored to your specific
-                needs and goals.
+              We provides you varieties of services for all kinds of printers and IT devices.
               </p>
               <p>
-                Customer-Centric Approach: We prioritize your satisfaction and
-                provide top-notch support to address your IT concerns.
+              We printer repair services that promise to running your business fluently.
               </p>
               <p>
                 Affordability: We offer competitive pricing without compromising
                 on the quality of our services.
               </p>
               <p>
-                Reliability: Count on us to be there when you need us. We're
-                committed to ensuring your IT environment is reliable and
-                available 24/7.
+              We believe in delivering customized and distinguishing services at competitive price.
               </p>
               <div className="btn btn-group">
                 <NavLink to="/contact">
