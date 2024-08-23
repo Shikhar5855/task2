@@ -7,7 +7,7 @@ export const Navbar = () => {
   return (
     <>
       <header>
-        <div className="container">
+        <div className="container2">
           <div className="logo-brand">
             <a href="/">
             <img src="/images/logo_adroitkey.png" >

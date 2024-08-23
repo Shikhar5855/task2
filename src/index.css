@@ -52,7 +52,7 @@ a {
   font-weight: 500;
   font-size: 1.8rem;
   letter-spacing: 0.1rem;
-  color: var(--btn-color);
+  color: var(--btn-color) !important;
   text-decoration: inherit;
 }
 
@@ -62,6 +62,9 @@ li {
 
 /* layout rule */
 
+.whitebutton{
+  color: #000000 !important;
+}
 .container {
   max-width: 140rem;
   padding: 4rem 2.4rem;
@@ -71,6 +74,8 @@ li {
   max-width: 140rem;
   padding: 4rem 2.4rem;
   margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
 }
 .grid {
   display: grid;
@@ -176,14 +181,9 @@ a.active {
 /*****Analytics Section*****/
 .section-analytics {
   margin: 9.6rem 0;
-
-  & .container {
-    background-color: var(--bg-color);
-    border-radius: 1rem;
-  }
-
+background-color: var(--dark-color);
   & .grid {
-    color: var(--dark-color);
+    background-color: var(--bg-color);
 
     & .div1 {
       text-align: center;
@@ -216,10 +216,6 @@ a.active {
     & h1 {
       margin-bottom: 3.2rem;
     }
-  }
-
-  & .container {
-    padding-top: 3.2rem;
   }
 
   & .contact-img {
@@ -283,11 +279,6 @@ a.active {
 .section-registration {
   padding: 0 3.2rem;
 
-  & .container {
-    /* background-color: #fff; */
-    padding-top: 3.2rem;
-    align-items: center;
-
     & img {
       width: 80%;
       height: auto;
@@ -310,16 +301,12 @@ a.active {
       margin-top: 3.2rem;
     }
   }
-}
+
 
 /*Login section css*/
 .section-login {
   padding: 0 3.2rem;
 
-  & .container {
-    /* background-color: #fff; */
-    padding-top: 3.2rem;
-    align-items: center;
 
     & img {
       width: 80%;
@@ -339,16 +326,14 @@ a.active {
       width: 80%;
       padding: 0.6rem 0.6rem;
     }
-
-    & button {
-      margin-top: 3.2rem;
-    }
   }
-}
+
 
 .service {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 15px;
+  align-items: flex-start;
 }
 .search{
   display: grid;
@@ -446,18 +431,11 @@ body {
 .text{
   color: #000000;
   justify-content: center;
-margin:50px;
+margin-bottom:50px;
 display: flex;
 }
 .search-button{
 	border-radius: 100px;
-}
-h{
-  color: white;
-  font-size: larger;
-}
-t{
-  color: white;
 }
 input{
   background-color: white;
@@ -465,13 +443,205 @@ input{
 textarea{
   background-color: white;
 }
+.crudtableminputs{
+  color: #000000;  
+  display: flex;
+  justify-content: center;
+  width: -webkit-fill-available;
+margin: 10px;
+}
 .crudtableinputs{
-  color: #000000;
+  color: black !important;
 }
 .crudtable , 
 .crudtablename,
 .crudtableemail,
 .crudtablecity,
-.crudtablecontact{
+.crudtablecontact,
+.crudtableAddress{
   color: #000000;
+}
+.addUserbutton{
+  margin: 7px;
+  color: white;
+}
+.crudtable{
+  width: -webkit-fill-available;
+}
+.crudinputtable{
+  width: -webkit-fill-available;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+}
+.crudtableinputs,
+.editbutton{
+width: -webkit-fill-available;
+margin: 10px;
+}
+.editbutton,
+.redbutton{
+  color: white;
+
+}
+.admin-panel{
+  width: 80%;
+}
+b,
+h3{
+  color: black;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.adduserbutton{
+  display: flex;
+  justify-content: space-between;
+}
+.inputs{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.crudtableinputs{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.userform{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.adduserb{
+  margin-bottom: -25px;
+  align-items: center;
+}
+thead{
+  color: #000000;
+}
+td{
+  color: #000000;
+}/* Add this to your CSS file */
+
+.userform {
+  margin-bottom: 20px;
+}
+
+.crudtableinputs {
+  margin: 5px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.adduserb {
+  margin-top: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.userlist {
+  margin-top: 20px;
+}
+
+.tableuser {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tableuser th, .tableuser td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.tableuser th {
+  background-color: #f4f4f4;
+}
+tr{
+  background-color: white;
+}
+
+.tableuser tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.tableuser tr:hover {
+  background-color: #f1f1f1;
+}
+/* Add this to your CSS file */
+.tableuser td button {
+  margin-right: 5px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.tableuser td button:first-child {
+  color: white;
+}
+
+.tableuser td button:last-child {
+  color: white;
+}.p{
+  width: 80%;
+  margin: 10px;
+}
+.btn-submit{
+  width: 80%;
+}
+.END{
+  display: flex;
+  flex-direction: row;
+}
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.search-input:focus {
+  border-color: var(--btn-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+.search-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--btn-color);
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.search-button:hover {
+  background-color: var(--btn-color);
+  transform: scale(1.05);
+}
+
+.search-button:active {
+  transform: scale(0.95);
 }

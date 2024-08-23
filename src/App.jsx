@@ -11,10 +11,12 @@ import { Navbar } from "./components/Navbar";
 import { Error } from "./pages/Error";
 import { Footer } from "./components/Footer/Footer";
 import { Logout } from "./pages/Logout";
-import Search from "./pages/search";
+import Search from "./pages/Search";
 import Admin from "./pages/admin"
 import Adminpanel from "./pages/Adminpanel";
 import CrudTable from "./pages/CrudTable";
+import CrudTableMaster from './pages/CrudTableMaster';
+import AddUser from './pages/Adduser.JSX';
 
 
 // Create a root once and render your app
@@ -44,6 +46,8 @@ const App = ()=>{
         <Route path = "/Admin" element = {<Admin/>}/>
         <Route path = "/Adminpanel" element = {<Adminpanel/>}/>
         <Route path = "/CrudTable" element = {<CrudTable/>}/>
+        <Route path = "/CrudTableMaster" element = {<CrudTableMaster/>}/>
+        <Route path = "/AddUser" element = {<AddUser/>}/>
       </Routes>
       <Footer />
     </BrowserRouter>

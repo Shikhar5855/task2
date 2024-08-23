@@ -16,8 +16,8 @@ export const Home = ()=>{
                         We are experts in services, repair, product, idea creation and can match your ideology to fulfill your needs. We have specialists in our team who work inflexibly nonstop and repairs your any brand Printers in the marketplace at a reasonable cost.
                         </p>
                         <div className="btn btn-group">
-                            <a href="/contact"><button className="btn">Connect Now</button></a>
-                            <a href="/service"><button className="btn secondary-btn">Learn More</button></a>
+                            <a href="/contact"><button className="btn redbutton">Connect Now</button></a>
+                            <a href="/service"><button className="btn whitebutton secondary-btn">Learn More</button></a>
                         </div>
                     </div>
                     <div className="hero-image">
@@ -52,8 +52,8 @@ export const Home = ()=>{
                         Welcome to AdroitKey and well known IT company specialized and all in one platform for your multiple needs. We are experts in services, repair, product, idea creation and can match your ideology to fulfill your needs. We have specialists in our team who work inflexibly nonstop and repairs your any brand Printers in the marketplace at a reasonable cost.
                         </p>
                         <div className="btn btn-group">
-                            <a href="/contact"><button className="btn">Connect Now</button></a>
-                            <a href="/service"><button className="btn secondary-btn">Learn More</button></a>
+                            <a href="/contact"><button className="btn redbutton">Connect Now</button></a>
+                            <a href="/service"><button className="btn whitebutton secondary-btn">Learn More</button></a>
                         </div>
                     </div>
                 </div>

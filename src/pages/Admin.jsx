@@ -24,6 +24,12 @@ export default function Admin() {
         e.preventDefault();
         console.log(user);
         Navigate("/Adminpanel")
+    }
+    const handleuser = async(e)=>{
+        e.preventDefault();
+        console.log(user);
+        Navigate("/Login")
+
     } //Handling the form submission
   return (
     <>
@@ -48,7 +54,7 @@ export default function Admin() {
                                         <input 
                                         type="email" 
                                         name="email" 
-                                        placeholder="enter your email" 
+                                        placeholder="Enter your email" 
                                         id="email" 
                                         required
                                         autoComplete="off"
@@ -59,15 +65,17 @@ export default function Admin() {
                                         <input 
                                         type="password" 
                                         name="password" 
-                                        placeholder="enter your password" 
+                                        placeholder="Enter your password" 
                                         id="password" 
                                         required
                                         autoComplete="off"
                                         />
                                     </div>
                                     <br />
-                                    <button type="submit"className="btn btn-submit">Login</button>
+                                    <button type="submit"className="btn btn-submit redbutton">Login</button>
                                     <br></br>
+                                    <h3 className="p"> OR</h3>
+                                    <button onClick={handleuser} className="admin-panel redbutton"> Login As User  </button>
                                 </form>
                                 </div>
                         </div>

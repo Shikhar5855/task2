@@ -29,9 +29,9 @@ export const About = ()=>{
               </p>
               <div className="btn btn-group">
                 <NavLink to="/contact">
-                  <button className="btn"> Connect Now</button>
+                  <button className="btn redbutton"> Connect Now</button>
                 </NavLink>
-                <button className="btn secondary-btn">learn more</button>
+                <button className="btn whitebutton secondary-btn">learn more</button>
               </div>
             </div>
             <div className="hero-image">

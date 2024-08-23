@@ -47,6 +47,8 @@ export const Contact = () => {
                     <div>
                       <label htmlFor="username">username</label>
                       <input
+                                  className="crudtableinputs"
+
                         type="text"
                         name="username"
                         placeholder="username"
@@ -61,6 +63,8 @@ export const Contact = () => {
                     <div>
                       <label htmlFor="email">email</label>
                       <input
+                                  className="crudtableinputs"
+
                         type="email"
                         name="email"
                         placeholder="email"
@@ -75,6 +79,8 @@ export const Contact = () => {
                     <div>
                       <label htmlFor="message">message</label>
                       <textarea
+                                  className="crudtableinputs"
+
                         name="message"
                         placeholder="message"
                         id="message"
@@ -88,7 +94,7 @@ export const Contact = () => {
                     </div>
 
                     <div>
-                      <button type="submit">submit</button>
+                      <button className="redbutton" type="submit">submit</button>
                     </div>
                   </form>
                 </section>

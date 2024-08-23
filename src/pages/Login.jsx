@@ -77,7 +77,7 @@ export const Login = ()=>{
                             </div>
                             {/* Lets tackle registration form */}
                             <div className="login-form">
-                                <h1 className="main-heading mb-3">Login Form</h1>
+                                <h1 className="main-heading mb-3">User Login Form</h1>
                                 <br />
 
                                 <form onSubmit={handleSubmit}>
@@ -86,7 +86,7 @@ export const Login = ()=>{
                                         <input 
                                         type="email" 
                                         name="email" 
-                                        placeholder="enter your email" 
+                                        placeholder="Enter your email" 
                                         id="email" 
                                         required
                                         autoComplete="off"
@@ -99,7 +99,7 @@ export const Login = ()=>{
                                         <input 
                                         type="password" 
                                         name="password" 
-                                        placeholder="enter your password" 
+                                        placeholder="Enter your password" 
                                         id="password" 
                                         required
                                         autoComplete="off"
@@ -108,9 +108,10 @@ export const Login = ()=>{
                                         />
                                     </div>
                                     <br />
-                                    <button type="submit"className="btn btn-submit">Login</button>
+                                    <button type="submit"className="btn btn-submit redbutton">Login</button>
                                     <br></br>
-                                    <button onClick={handleadmin} className="admin-panel"> Admin Panel </button>
+                                    <h3 className="p"> OR</h3>
+                                    <button onClick={handleadmin} className="admin-panel redbutton"> Admin Login </button>
                                 </form>
                             </div>
                         </div>
