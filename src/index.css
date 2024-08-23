@@ -443,6 +443,10 @@ input{
 textarea{
   background-color: white;
 }
+
+.w{
+  color: white;
+}
 .crudtableminputs{
   color: #000000;  
   display: flex;

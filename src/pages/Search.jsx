@@ -47,7 +47,7 @@ export default function Search() {
           Search
         </button>
       </div>
-      <h3 className='text'>Please search the data...</h3>
+	  <h3 className='text'>Please search the data...</h3>
 
       <div id="results">
         {filteredUsers.length > 0 ? (
