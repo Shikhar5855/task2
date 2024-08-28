@@ -1,6 +1,9 @@
+import { Navbar } from "../components/Navbar"
+
 export const Service = () => {
   return (
     <>
+    <Navbar/>
 <div className="container">
             <h1> Service we provide</h1>
             <br></br>

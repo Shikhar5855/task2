@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Navbar } from "../components/Navbar";
 
 export const Contact = () => {
   const [contact, setContact] = useState({
@@ -25,6 +26,7 @@ export const Contact = () => {
 
   return (
     <>
+    <Navbar/>
       <section>
         <main>
           <div className="section-contact">
@@ -51,7 +53,7 @@ export const Contact = () => {
 
                         type="text"
                         name="username"
-                        placeholder="username"
+                        placeholder="Username"
                         id="username"
                         autoComplete="off"
                         value={contact.username}
@@ -67,7 +69,7 @@ export const Contact = () => {
 
                         type="email"
                         name="email"
-                        placeholder="email"
+                        placeholder="Email"
                         id="email"
                         autoComplete="off"
                         value={contact.email}
@@ -82,7 +84,7 @@ export const Contact = () => {
                                   className="crudtableinputs"
 
                         name="message"
-                        placeholder="message"
+                        placeholder="Message"
                         id="message"
                         autoComplete="off"
                         value={contact.message}

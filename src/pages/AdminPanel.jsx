@@ -1,6 +1,7 @@
 import React from 'react';
 import CrudTable from './CrudTable';
 import { useState,useEffect } from 'react';
+import AdminNavbar from '../components/AdminNavbar';
 
 export default function AdminPanel() {
   

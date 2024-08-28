@@ -1,9 +1,11 @@
 import { Analytics } from "../components/Analytics";
 import { NavLink } from "react-router-dom";
+import { Navbar } from "../components/Navbar";
 
 export const About = ()=>{
     return (
         <>
+        <Navbar/>
         <main>
         <section className="section-hero">
           <div className="container grid grid-two-cols">
@@ -47,7 +49,6 @@ export const About = ()=>{
       </main>
 
       <Analytics />
-
         </>
     );
 }

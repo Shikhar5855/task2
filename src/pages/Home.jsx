@@ -1,8 +1,10 @@
 import { Analytics } from "../components/Analytics";
+import { Navbar } from "../components/Navbar";
 
 export const Home = ()=>{
     return (
         <>
+        <Navbar/>
         <main>
             <section className="section-hero">
                 <div className="container grid grid-two-cols">

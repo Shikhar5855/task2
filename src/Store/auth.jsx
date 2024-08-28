@@ -1,38 +1,39 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 
 export const AuthContext = createContext();
 
+export const AuthProvider = ({ children }) => {
+    const [token, setToken] = useState(localStorage.getItem("token") || "");
 
-// eslint-disable-next-line react/prop-types
-export const AuthProvider = ({children})=>{
-    const [token, setToken] = useState(localStorage.getItem("token"));
+    useEffect(() => {
+        // Synchronize token state with localStorage
+        localStorage.setItem("token", token);
+    }, [token]);
 
-    const storeTokenInLS = (serverToken)=>{
-        return localStorage.setItem("token", serverToken)
+    const storeTokenInLS = (serverToken) => {
+        setToken(serverToken);
     };
 
-
-    let isLoggedIn = !!token;
-    console.log("isLOGGEDIN", isLoggedIn);
-    
-
-
-    //Tackling the logout functionality
-    const LogoutUser = ()=>{
+    const LogoutUser = () => {
         setToken("");
-        return localStorage.removeItem("token");
-    }
+        localStorage.removeItem("token");
+    };
 
-    return ( <AuthContext.Provider value={{storeTokenInLS, LogoutUser, isLoggedIn}}>
-        {children}
-    </AuthContext.Provider>
+    const isLoggedIn = !!token;
+
+    console.log("isLoggedIn:", isLoggedIn);
+
+    return (
+        <AuthContext.Provider value={{ storeTokenInLS, LogoutUser, isLoggedIn }}>
+            {children}
+        </AuthContext.Provider>
     );
-}
+};
 
-export const useAuth = ()=>{
+export const useAuth = () => {
     const authContextValue = useContext(AuthContext);
     if (!authContextValue) {
-        throw new Error("useAuth used outside of the Provider");
+        throw new Error("useAuth must be used within an AuthProvider");
     }
     return authContextValue;
-}
+};

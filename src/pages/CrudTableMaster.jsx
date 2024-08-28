@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import CrudTable from "./CrudTable";
+import { useNavigate } from "react-router-dom";
+import AdminNavbar from "../components/AdminNavbar";
 
 function CrudTableMaster() {
     const [fields, setFields] = useState(() => {
@@ -12,6 +13,7 @@ function CrudTableMaster() {
         ];
     });
 
+    const navigate = useNavigate();
     const [newField, setNewField] = useState({ name: "", label: "" });
 
     useEffect(() => {
@@ -25,6 +27,9 @@ function CrudTableMaster() {
             setNewField({ name: "", label: "" });
         }
     };
+    const adminpage = (e) => {
+        navigate("/AdminPanel");
+    }
 
     // Delete a field
     const deleteField = (fieldName) => {
@@ -34,11 +39,13 @@ function CrudTableMaster() {
 
     return (
         <div>
+            <AdminNavbar/>
             <div className="container1">
+                <button onClick={adminpage} >admin table </button>
                 <h2>Crud Table Master</h2>
                 <div className="inputs">
                     <input
-                    className="crudtableminputs"
+                        className="crudtableminputs"
                         type="text"
                         placeholder="Field Name"
                         value={newField.name}
@@ -47,8 +54,8 @@ function CrudTableMaster() {
                         }
                     />
                     <input
-                    className="crudtableminputs"
-                    type="text"
+                        className="crudtableminputs"
+                        type="text"
                         placeholder="Field Label"
                         value={newField.label}
                         onChange={(e) =>
@@ -56,23 +63,23 @@ function CrudTableMaster() {
                         }
                     />
                     <button className="crudtableminputs redbutton"
- onClick={addField}>Add Field</button>
+                        onClick={addField}>Add Field</button>
                 </div>
 
-                    <h3>Current Fields</h3>
-                    <ul>
+                <h3>Current Fields</h3>
+                <ul>
                     <div className="crudtableinputs">
 
                         {fields.map((field) => (
                             <li key={field.name}>
                                 {field.label}
-                                <button className="redbutton" onClick={() => deleteField(field.name)}>  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" className="bi bi-trash" viewBox="0 0 20 20">
-                    <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z" />
-                    <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z" />
-                  </svg></button>
+                                <button className="deletebtn" onClick={() => deleteField(field.name)}>  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="red" className="bi bi-trash" viewBox="0 0 20 20">
+                                    <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z" />
+                                    <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z" />
+                                </svg></button>
                             </li>
                         ))}
-                </div>
+                    </div>
                 </ul>
             </div>
             {/* Pass fields to CrudTable */}

@@ -28,18 +28,11 @@ export const Navbar = () => {
               <li>
                 <NavLink to="/contact">Contact</NavLink>
               </li>
-              {isLoggedIn ? (
-                <li>
-                  <NavLink to="/logout">Logout</NavLink>
-                </li>
-              ) : (
-                <>
+             
                   <li>
                     <NavLink to="/login">Login</NavLink>
                   </li>
-                </>
-              )}
-            </ul>
+              </ul>
           </nav>
         </div>
       </header>
