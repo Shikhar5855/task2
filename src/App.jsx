@@ -20,12 +20,6 @@ import AdminPanel from './pages/Adminpanel';
 // Create a root once and render your app
 const rootElement = document.getElementById('root');
 const root = ReactDOM.createRoot(rootElement);
-
-root.render(
-  // <React.StrictMode>
-  //   <Adminpanel />
-  // </React.StrictMode>
-);
 const App = ()=>{
   return (
     <>

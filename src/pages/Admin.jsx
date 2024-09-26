@@ -12,8 +12,8 @@ export default function Admin() {
 
     // Manually set admin credentials
     const manualAdmin = {
-        email: "test@test.com",
-        password: "test",
+        email: "admin@admin.com",
+        password: "admin1234",
         token: "admin-token",
     };
     const [passwordVisible, setPasswordVisible] = useState(false);
@@ -98,6 +98,7 @@ export default function Admin() {
                                     </div>
                                     <div>
                                         <label htmlFor="password">Password</label>
+                                        <div className="password-input-wrapper">
                                         <input
                                             type={passwordVisible ? "text" : "password"} // Toggle between text and password
                                             name="password"
@@ -128,6 +129,7 @@ export default function Admin() {
 
                                             )}
                                         </button>
+                                        </div>
                                     </div>
                                     <br />
                                     <button type="submit" className="btn btn-submit redbutton">Login</button>

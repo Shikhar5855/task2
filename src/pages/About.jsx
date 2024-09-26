@@ -28,6 +28,7 @@ export const About = ()=>{
               </p>
               <p>
               We believe in delivering customized and distinguishing services at competitive price.
+              
               </p>
               <div className="btn btn-group">
                 <NavLink to="/contact">

@@ -1,4 +1,6 @@
 footer{
+    display: fixed;
+    bottom: 0;
     padding: 3.2rem;
     text-align: center;
     background-color: var(--btn-color);

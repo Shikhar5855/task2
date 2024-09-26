@@ -52,7 +52,7 @@ a {
   font-weight: 500;
   font-size: 1.8rem;
   letter-spacing: 0.1rem;
-  color: var(--btn-color) !important;
+  color: var(--btn-color) ;
   text-decoration: inherit;
 }
 
@@ -67,10 +67,16 @@ li {
   background-color: transparent !important;
 }
 .deletebtn{
-  background-color: transparent;
+  background-color: transparent !important;
+}
+.deleteParent{
+  display: flex;
+  justify-content: space-between;
+  margin: 25px;
+  color: #000000;
 }
 .editbtn{
-  background-color: transparent;
+  background-color: transparent !important;
 }
 
 svg{
@@ -112,7 +118,7 @@ button {
   padding: 1rem 2.2rem;
   font-size: 1.7rem;
   font-weight: 500;
-  background-color: var(--btn-color);
+  background-color: var(--btn-color) !important;
   border-radius: 0.8rem;
   border: 0.1rem solid transparent;
   cursor: pointer;
@@ -122,14 +128,14 @@ button {
 
 .secondary-btn {
   background-color: transparent;
-  box-shadow: inset 0 0 0 0.2rem var(--btn-color);
+  box-shadow: inset 0 0 0 0.2rem var(--btn-color) !important;
   margin-left: 3.2rem;
 }
 
 /* state rules */
 
 button:hover {
-  box-shadow: inset 0 0 0 0.2rem var(--bg-color);
+  box-shadow: inset 0 0 0 0.2rem var(--bg-color) !important;
   /* border: 0.2rem solid #fff; */
 }
 
@@ -196,13 +202,13 @@ a.active {
 /*****Analytics Section*****/
 .section-analytics {
   margin: 9.6rem 0;
-background-color: var(--dark-color);
+background-color: var(--dark-color) !important;
   & .grid {
-    background-color: var(--bg-color);
+    background-color: var(--bg-color) !important;
 
     & .div1 {
       text-align: center;
-      border-right: 0.2rem solid var(--dark-color);
+      border-right: 0.2rem solid var(--dark-color) !important;
 
       &:last-child {
         border: none;
@@ -281,7 +287,7 @@ background-color: var(--dark-color);
   font-size: 18vw;
   line-height: 1em;
   animation: animate 10s ease-in-out infinite;
-  background: -webkit-repeating-linear-gradient(-60deg, #71b7e6, var(--btn-color), #b98acc, #ee8176, #b98acc, var(--btn-color), #9b59b6);
+  background: -webkit-repeating-linear-gradient(-60deg, #71b7e6, var(--btn-color), #b98acc, #ee8176, #b98acc, var(--btn-color), #9b59b6) !important;
   background-size: 500%;
   /* -webkit-background-clip: text; */
   -webkit-text-fill-color: transparent;
@@ -342,7 +348,12 @@ background-color: var(--dark-color);
       padding: 0.6rem 0.6rem;
     }
   }
-
+.fields-fetch{
+  display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 
 .service {
   display: flex;
@@ -459,6 +470,12 @@ textarea{
   background-color: white;
 }
 
+.tableuser{
+  overflow-x: scroll !important;
+}
+.csvfile{
+  color: #000000 !important;
+}
 .w{
   color: white;
 }
@@ -471,6 +488,15 @@ margin: 10px;
 }
 .crudtableinputs{
   color: black !important;
+  display: flex;
+  justify-content: space-evenly !important;
+  gap: 10px !important;
+}
+.admintable{
+  display: flex;
+}
+.list{
+  display: grid;
 }
 .crudtable , 
 .crudtablename,
@@ -485,13 +511,28 @@ margin: 10px;
   color: white;
 }
 .crudtable{
-  width: -webkit-fill-available;
+  width: 100% !important;
+  display: flow-root;
+overflow-x: auto;
+}
+.crudtables{
+width: 100%;
+  display: inline-table;
 }
 .crudinputtable{
   width: -webkit-fill-available;
   margin-top: 50px;
   margin-bottom: 50px;
   display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.selected-fields ul{
+  display: flex !important;
+  flex-wrap: wrap !important;
+}
+th, tr {
+  padding: 2px ;
 }
 .crudtableinputs,
 .editbutton{
@@ -499,7 +540,7 @@ width: -webkit-fill-available;
 }
 .editbutton,
 .redbutton{
-  color: white;
+  color: white !important;
 
 }
 .admin-panel{
@@ -507,6 +548,7 @@ width: -webkit-fill-available;
 }
 b,
 h3{
+
   color: black;
   width: 100%;
   display: flex;
@@ -640,7 +682,7 @@ tr{
 }
 
 .search-input:focus {
-  border-color: var(--btn-color);
+  border-color: var(--btn-color) !important;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   outline: none;
 }
@@ -650,14 +692,14 @@ tr{
   font-size: 16px;
   border-radius: 8px;
   border: none;
-  background-color: var(--btn-color);
+  background-color: var(--btn-color) !important;
   color: #fff;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.3s;
 }
 
 .search-button:hover {
-  background-color: var(--btn-color);
+  background-color: var(--btn-color) !important;
   transform: scale(1.05);
 }
 
@@ -670,7 +712,7 @@ tr{
   margin-left:100px;}
 
 .dropdown-toggle {
-  background-color: var(--btn-color);
+  background-color: var(--btn-color) !important;
   color: white;
   padding: 8px 16px;
   border: none;
@@ -729,7 +771,7 @@ tr{
 }
 
 .remove-field {
-  background: none;
+  background: transparent !important;
   border: none;
   color: #ff0000; /* Red color for the "x" */
   font-size: 20px; /* Small size for the "x" */
@@ -739,7 +781,7 @@ tr{
 }
 
 .clear-all {
-  background-color: var(--btn-color); /* Button background color */
+  background-color: var(--btn-color) !important; /* Button background color */
   color: white;
   border: none;
   border-radius: 5px;
@@ -749,7 +791,7 @@ tr{
 }
 
 .clear-all:hover {
-  background-color:var(--btn-color); /* Darker blue on hover */
+  background-color:var(--btn-color) !important; /* Darker blue on hover */
 }
 
 .password-container {
@@ -759,6 +801,7 @@ tr{
 .password-input-wrapper {
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .crudtableinputs {
@@ -769,12 +812,12 @@ tr{
 }
 
 .password-toggle-button {
-  background: none;
+  background: transparent !important;
   border: none;
   cursor: pointer;
   position: absolute;
   right: 0;
-  top: 70%;
+  top: 48%;
   transform: translateY(-50%);
 }
 
@@ -790,10 +833,31 @@ tr{
   border: none;
   cursor: pointer;
   position: absolute;
-  right: 14% !important;
-  bottom: 30.3% !important;
-  transform: translateY(-50%);
+  right: 20%;
+  background-color: transparent !important;
 }
 .red{
   color: black;
+}
+/* Disabled state for the search button */
+.search-button:disabled {
+  background-color: #c0c0c0; /* Gray color for disabled state */
+  cursor: not-allowed; /* Change cursor to indicate disabled state */
+  transform: none; /* Remove hover scale effect when disabled */
+}
+
+
+/* Target the cross button in the search input */
+.search-container input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  height: 16px;
+  width: 16px;
+  background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"%3E%3Cg fill="none" stroke="%23000" stroke-width="2"%3E%3Cline x1="1" y1="1" x2="13" y2="13"/%3E%3Cline x1="1" y1="13" x2="13" y2="1"/%3E%3C/g%3E%3C/svg%3E');
+  cursor: pointer;
+}
+
+.search-container input[type="search"]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
 }

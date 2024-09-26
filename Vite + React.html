@@ -1,24 +1,40 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://localhost:5173/AdminPanel -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="module">
+import RefreshRuntime from "/@react-refresh"
+RefreshRuntime.injectIntoGlobalHook(window)
+window.$RefreshReg$ = () => {}
+window.$RefreshSig$ = () => (type) => type
+window.__vite_plugin_react_preamble_installed__ = true
+</script>
+
+    <script type="module" src="./Vite + React_files/client"></script>
+
+    
+    <link rel="icon" type="image/svg+xml" href="http://localhost:5173/fav-icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vite + React</title>
+  <style type="text/css" data-vite-dev-id="D:/Alobha/task-2/clientside1/src/components/Navbar.css">.container2{
+    max-width: 140rem;
+    padding: 4.2rem 2.4rem;
+    display: flex;
+    justify-content: space-between;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #b7384baa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #747677aa);
-}
-
-* {
+ul{
+    display: flex;
+    gap: 3.2rem;
+}</style><style type="text/css" data-vite-dev-id="D:/Alobha/task-2/clientside1/src/components/Footer/Footer.css">footer{
+    display: fixed;
+    bottom: 0;
+    padding: 3.2rem;
+    text-align: center;
+    background-color: var(--btn-color);
+    margin-top: auto;
+    position:relative;
+    width: 100%;
+}</style><style type="text/css" data-vite-dev-id="D:/Alobha/task-2/clientside1/src/index.css">* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -72,7 +88,7 @@ a {
   font-weight: 500;
   font-size: 1.8rem;
   letter-spacing: 0.1rem;
-  color: var(--btn-color) !important;
+  color: var(--btn-color) ;
   text-decoration: inherit;
 }
 
@@ -87,7 +103,7 @@ li {
   background-color: transparent !important;
 }
 .deletebtn{
-  background-color: transparent;
+  background-color: transparent !important;
 }
 .deleteParent{
   display: flex;
@@ -96,7 +112,7 @@ li {
   color: #000000;
 }
 .editbtn{
-  background-color: transparent;
+  background-color: transparent !important;
 }
 
 svg{
@@ -528,13 +544,28 @@ margin: 10px;
   color: white;
 }
 .crudtable{
-  width: -webkit-fill-available;
+  width: 100% !important;
+  display: flow-root;
+overflow-x: auto;
+}
+.crudtables{
+width: 100%;
+  display: inline-table;
 }
 .crudinputtable{
   width: -webkit-fill-available;
   margin-top: 50px;
   margin-bottom: 50px;
   display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.selected-fields ul{
+  display: flex !important;
+  flex-wrap: wrap !important;
+}
+th, tr {
+  padding: 2px ;
 }
 .crudtableinputs,
 .editbutton{
@@ -550,6 +581,7 @@ width: -webkit-fill-available;
 }
 b,
 h3{
+
   color: black;
   width: 100%;
   display: flex;
@@ -624,6 +656,7 @@ button {
   text-align: left;
   border-bottom: 1px solid #ddd;
 }
+
 .tableuser th {
   background-color: #f4f4f4;
 }
@@ -770,18 +803,6 @@ tr{
   font-weight: 500;
 }
 
-.selected-fields ul{
-  display: flex !important;
-  flex-wrap: wrap !important;
-}
-.csvfile{
-  color: #000000 !important;
-}
-.crudtables{
-
-  width: 100% !important;
-  display: inline-table;
-}
 .remove-field {
   background: transparent !important;
   border: none;
@@ -824,7 +845,7 @@ tr{
 }
 
 .password-toggle-button {
-  background: none;
+  background: transparent !important;
   border: none;
   cursor: pointer;
   position: absolute;
@@ -846,6 +867,7 @@ tr{
   cursor: pointer;
   position: absolute;
   right: 20%;
+  background-color: transparent !important;
 }
 .red{
   color: black;
@@ -872,26 +894,11 @@ tr{
   width: 0;
   height: 0;
 }
+</style></head>
+  <body>
+    <div id="root"><header><div class="container2"><div class="logo-brand"><a href="http://localhost:5173/"><img src="./Vite + React_files/logo_adroitkey.png"></a></div><li><a aria-current="page" class="active" href="http://localhost:5173/AdminPanel">Admin Table </a></li><li><a class="" href="http://localhost:5173/CrudTableMaster">Admin Table Master</a></li><li><a class="" href="http://localhost:5173/AddUser">Add user</a></li><li><a class="" href="http://localhost:5173/login">Logout</a></li></div></header><div class="container"><div class="adduserbutton"><button class="redbutton">Admin Master</button><h2>Admin Table</h2><button class="btn btn-primary redbutton">Add User</button></div><div><form><input type="file" accept=".csv" id="file-id-cus" name="file"><button type="submit">Submit</button></form></div><div class="crudinputtable"><form action="http://localhost:5173/AdminPanel#" class="crudinputtable"><button type="submit" class="addUserbutton">Submit</button></form></div><table class="crudtable" border="5"><thead><tr><th>Actions</th></tr></thead><tbody></tbody></table></div><footer class="fixed-bottom "><div class="w">@ADROITKEY2024</div></footer></div>
+    
+    <script type="module" src="./Vite + React_files/main.jsx"></script>
+  
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
+</body></html>
